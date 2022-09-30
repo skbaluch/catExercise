@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CatFacts</string>
+    <string name="breeds">Breeds</string>
+    <string name="details">Breed Details</string>
+    <string name="metrics">Metrics</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Breeds</string>
+    <string name="second_fragment_label">Breed Details</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="breed">Breed</string>
+    <string name="species">Felis catus</string>
+    <string name="familiar">Domestic cat</string>
+    <string name="current_metrics">Current Metrics</string>
+    <string name="current_device_name">Device Name</string>
+    <string name="current_os_name">OS Name</string>
+    <string name="unknown">Unknown</string>
+    <string name="random_cat_fact_label">"Random Cat Fact: "</string>
+</resources>

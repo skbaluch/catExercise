@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "streamline-android-challenge-kotlin"

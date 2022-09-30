@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/BreedsFragment">
+
+    <fragment
+        android:id="@+id/BreedsFragment"
+        android:name="com.newrelic.mobile.challenge.BreedsFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_breeds">
+
+        <action
+            android:id="@+id/action_breed_list_to_breed_detail"
+            app:destination="@id/BreedDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/BreedDetailsFragment"
+        android:name="com.newrelic.mobile.challenge.DetailsFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_details">
+
+        <action
+            android:id="@+id/action_breed_detail_to_breed_list"
+            app:destination="@id/BreedsFragment" />
+    </fragment>
+</navigation>
