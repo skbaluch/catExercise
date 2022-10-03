@@ -27,6 +27,7 @@
         android:hint="domestic cat"
         android:padding="5dp"
         tools:text="Felis catus" />
+
   </LinearLayout>
 
   <View

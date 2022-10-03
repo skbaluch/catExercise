@@ -26,6 +26,11 @@ class MetricsFragment : Fragment() {
         view.findViewById<TextView>(R.id.txtDeviceName).text = savedInstanceState?.getString("deviceName")
         view.findViewById<TextView>(R.id.txtOSName).text = savedInstanceState?.getString("osName")
 
-        // TODO add additional metric values here
     }
+    fun measureTimeMillis(block: () -> Unit): Long {
+            val start = System.currentTimeMillis()
+            block()
+            return System.currentTimeMillis() - start
+        }
+
 }

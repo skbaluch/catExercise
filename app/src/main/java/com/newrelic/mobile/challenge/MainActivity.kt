@@ -1,11 +1,14 @@
 package com.newrelic.mobile.challenge
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<FloatingActionButton>(R.id.randomCatFact).setOnClickListener { view ->
             val catFactModel = CatFactsDataSource.getInstance().getCatFact()
             Snackbar.make(
-                view, getString(R.string.random_cat_fact_label) + catFactModel.fact,
+                view, getString(R.string.random_cat_fact_label) + catFactModel,
                 Snackbar.LENGTH_LONG
             )
                 .setAction("Action", null).show()
@@ -35,8 +38,22 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_metrics -> TODO()
+            R.id.action_metrics -> return super.onOptionsItemSelected(item)
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+     fun showAlertDialog()
+    {
+        val builder:AlertDialog.Builder = AlertDialog.Builder(this)
+        builder.setTitle("Error")
+        builder.setMessage("network not connected")
+
+        builder.setPositiveButton("ok", DialogInterface.OnClickListener{ dialog, which -> dialog.dismiss()})
+
+        val alertDialog:AlertDialog = builder.create()
+        alertDialog.show()
+
+    }
+
 }

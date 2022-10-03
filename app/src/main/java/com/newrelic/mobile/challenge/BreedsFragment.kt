@@ -23,7 +23,18 @@ class BreedsFragment : Fragment() {
          */
         catFactsDataSource = CatFactsDataSource.getInstance()
         datasetAdapter = CatFactsAdapter()
+
+//        activity?.setContentView(R.layout.fragment_breeds)
+//        val click = activity?.findViewById(R.id.breedsList) as RecyclerView
+//
+//        click.setOnClickListener{
+//            CatFactsDataSource.getInstance().getCatFact()
+//        }
+//            /* the function doesn't override */
+//
+
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
